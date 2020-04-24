@@ -8,6 +8,6 @@ jobs:
       - name: Babashka test
         uses: ./
         with:
-          source-paths: 'src'
-          test-paths: 'test'
+          source-paths: 'test/src'
+          test-paths: 'test/test'
           test-file-pattern: '_test.clj$'
