@@ -1,0 +1,25 @@
+name: 'Babashka Test Action'
+description: 'Run clojure.test by Babashka'
+inputs:
+  source-paths:
+    description: 'Source paths (space separated)'
+    required: true
+    default: 'src'
+
+  test-paths:
+    description: 'Test paths (space separated)'
+    required: true
+    default: 'test'
+
+  test-file-pattern:
+    description: 'Pattern for test files'
+    required: true
+    default: '_test.clj$'
+
+runs:
+  using: 'docker'
+  image: 'Dockerfile'
+  args:
+    - ${{ inputs.source-paths }}
+    - ${{ inputs.test-paths }}
+    - ${{ inputs.test-file-pattern }}

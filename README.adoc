@@ -1,0 +1,45 @@
+= Babashka Test Action
+
+Github Action to run `clojure.test` by https://github.com/borkdude/babashka[Babashka].
+
+
+== Inputs
+
+[cols="20,10,20,50"]
+|===
+| Name | Required | Default | Description
+
+| source-paths
+| Yes
+| `"src"`
+| Source paths (space separated)
+
+
+| test-paths
+| Yes
+| `"test"`
+| Test paths (space separated)
+
+| test-file-pattern
+| Yes
+| `"_test.clj$"`
+| Pattern for test files.
+
+|===
+
+== Example usage
+
+[source,yaml]
+----
+- uses: liquidz/babashka-test-action@v1
+  with:
+    source-paths: 'src'
+    test-paths: 'test'
+    test-file-pattern: '_test.clj$'
+----
+
+== License
+
+Copyright (c) 2020 http://twitter.com/uochan[Masashi Iizuka]
+
+Distributed under the MIT License.
