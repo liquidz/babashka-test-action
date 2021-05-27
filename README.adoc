@@ -31,7 +31,7 @@ Github Action to run `clojure.test` by https://github.com/borkdude/babashka[Baba
 
 [source,yaml]
 ----
-- uses: liquidz/babashka-test-action@v1
+- uses: liquidz/babashka-test-action@v1.1
   with:
     source-paths: 'src'
     test-paths: 'test'
