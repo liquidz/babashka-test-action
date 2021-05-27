@@ -50,6 +50,6 @@ $ docker run --rm -v $(pwd):/tmp -w /tmp uochan/babashka-test 'src' 'test' '_tes
 
 == License
 
-Copyright (c) 2020 http://twitter.com/uochan[Masashi Iizuka]
+Copyright (c) 2020-2021 http://twitter.com/uochan[Masashi Iizuka]
 
 Distributed under the MIT License.
