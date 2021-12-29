@@ -42,7 +42,7 @@ Github Action to run `clojure.test` by https://github.com/borkdude/babashka[Baba
 
 With docker, you can use this action in your local machine.
 
-https://hub.docker.com/repository/docker/uochan/babashka-test[Docker image]
+https://github.com/users/liquidz/packages/container/package/babashka-test[Docker image]
 [source,shell]
 ----
 $ docker run --rm -v $(pwd):/tmp -w /tmp uochan/babashka-test 'src' 'test' '_test.clj$'
