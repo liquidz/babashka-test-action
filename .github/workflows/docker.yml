@@ -3,6 +3,7 @@ on:
   push:
     branches:
       - master
+      - dev
     tags:
       - '*'
 jobs:
@@ -16,7 +17,7 @@ jobs:
       - name: docker login
         run: |
          echo "${{ secrets.GITHUB_TOKEN }}" | docker login ghcr.io -u ${{ github.actor }} --password-stdin
-         docker pull ghcr.io/liquidz/babashka-test:latest
+         #docker pull ghcr.io/liquidz/babashka-test:latest
       - name: build latest
         run: |
          docker build . -t ghcr.io/liquidz/babashka-test:latest --cache-from ghcr.io/liquidz/babashka-test:latest
